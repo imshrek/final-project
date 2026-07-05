@@ -1,237 +1,552 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Cup 2026 - The Beautiful Game Awaits</title>
-    <link rel="stylesheet" href="style.css">
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WC2026 HUB | The Global Stage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "primary-container": "#0d1b2a",
+                        "secondary": "#4ae183",
+                        "on-secondary": "#003919",
+                        "on-tertiary": "#3a3000",
+                        "surface-variant": "#333539",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "surface-container-low": "#1a1c1f",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "on-secondary-container": "#00431f",
+                        "background": "#111317",
+                        "tertiary-container": "#c9a900",
+                        "outline": "#8e9196",
+                        "inverse-on-surface": "#2e3034",
+                        "surface-container-highest": "#333539",
+                        "tertiary-fixed": "#ffe16d",
+                        "secondary-fixed-dim": "#4ae183",
+                        "surface": "#111317",
+                        "surface-dim": "#111317",
+                        "primary-fixed-dim": "#bac8dc",
+                        "surface-container-lowest": "#0c0e12",
+                        "secondary-fixed": "#6bfe9c",
+                        "secondary-container": "#06bb63",
+                        "primary": "#bac8dc",
+                        "on-surface": "#e2e2e7",
+                        "on-surface-variant": "#c4c6cc",
+                        "outline-variant": "#44474c",
+                        "surface-container": "#1e2023",
+                        "surface-container-high": "#282a2e",
+                        "on-tertiary-container": "#4c3e00",
+                        "on-primary": "#243141",
+                        "on-secondary-fixed-variant": "#005228",
+                        "on-tertiary-fixed": "#221b00",
+                        "on-secondary-fixed": "#00210c",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#37393d",
+                        "on-primary-container": "#768497",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#3a4859",
+                        "on-background": "#e2e2e7",
+                        "inverse-primary": "#525f71",
+                        "tertiary": "#e9c400",
+                        "surface-tint": "#bac8dc",
+                        "inverse-surface": "#e2e2e7",
+                        "primary-fixed": "#d6e4f9",
+                        "on-primary-fixed": "#0f1c2c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["anybody"],
+                        "headline-sm": ["anybody"],
+                        "body-md": ["plusJakartaSans"],
+                        "display-hero": ["anybody"],
+                        "label-md": ["plusJakartaSans"],
+                        "headline-lg": ["anybody"],
+                        "headline-lg-mobile": ["anybody"],
+                        "body-lg": ["plusJakartaSans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-hero": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #111317;
+            color: #e2e2e7;
+            overflow-x: hidden;
+        }
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        .diagonal-bg {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .glass-card {
+            background: rgba(30, 32, 35, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(186, 200, 220, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <h1 class="logo">🌍 World Cup 2026</h1>
-            <p class="tagline">United by Football, Divided by Passion</p>
-        </div>
-    </header>
+<body class="font-body-md text-body-md selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container/80 dark:bg-surface-container/80 backdrop-blur-md border-b border-outline-variant/20 shadow-sm h-20">
+<div class="flex justify-between items-center px-margin-desktop h-full max-w-[1440px] mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary tracking-tighter">WC2026 HUB</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:scale-105 transition-transform duration-200" href="#history">History</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:scale-105 transition-transform duration-200" href="#players">Top Players</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:scale-105 transition-transform duration-200" href="#founders">Founders</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:scale-105 transition-transform duration-200" href="#teams">Top Teams</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">search</button>
+<button class="bg-secondary text-on-secondary px-md py-xs rounded-full font-label-md hover:scale-105 transition-transform duration-200">Tickets</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden bg-primary-container">
 
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#tournaments" class="nav-link">Tournaments</a></li>
-            <li><a href="#teams" class="nav-link">Teams</a></li>
-            <li><a href="#schedule" class="nav-link">Schedule</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-        </ul>
-    </nav>
+<div class="relative z-10 px-margin-desktop max-w-[1440px] mx-auto w-full">
+<div class="max-w-3xl space-y-md">
+<span class="bg-secondary/20 text-secondary border border-secondary/30 px-sm py-xs rounded-full font-label-md inline-block uppercase tracking-widest animate-pulse">United 2026</span>
+<h1 class="font-display-hero text-display-hero text-white drop-shadow-lg">THREE NATIONS.<br/><span class="text-secondary">ONE PASSION.</span></h1>
+<p class="font-body-lg text-body-lg text-primary max-w-xl">Experience the largest FIFA World Cup in history. From the heat of Mexico City to the giants of the United States and the spirit of Canada.</p>
+<div class="flex gap-md pt-base">
+<button class="bg-secondary text-on-secondary px-lg py-md rounded-lg font-headline-sm hover:scale-105 transition-all shadow-[0_0_20px_rgba(74,225,131,0.3)]">Explore Venues</button>
+<button class="border border-secondary text-secondary px-lg py-md rounded-lg font-headline-sm hover:bg-secondary/10 transition-all">Match Center</button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-base left-1/2 -translate-x-1/2 flex flex-col items-center gap-xs">
+<span class="text-on-surface-variant text-label-md font-label-md">Scroll to explore</span>
+<div class="w-[1px] h-xl bg-gradient-to-b from-secondary to-transparent"></div>
+</div>
+</section>
+<!-- History Section -->
+<section class="py-xl px-margin-desktop max-w-[1440px] mx-auto overflow-hidden" id="history">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-white mb-sm">The Evolution of Glory</h2>
+<div class="h-1 w-24 bg-tertiary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="group bg-surface-container p-lg rounded-xl border border-outline-variant/20 hover:border-secondary transition-all duration-500 hover:-translate-y-2">
+<div class="mb-md">
+<span class="font-display-hero text-headline-lg text-on-surface-variant/20 block">1930</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary">The Uruguay Inaugural</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Thirteen nations traveled across oceans to compete in the very first tournament, marking the birth of a global phenomenon in Montevideo.</p>
+<div class="h-[200px] w-full rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic, vintage-style sepia photograph of the 1930 Uruguay World Cup stadium filled with spectators wearing classic hats and suits. The atmosphere is nostalgic and historical, with a high-contrast dark blue overlay reflecting a premium modern interface. Soft film grain and subtle glow effects add to the prestigious, celebratory mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTOT7Y_VfFsVbA89S-9tQCo1FNBUoxuowWyEA5ogWV8M-Cy6G7skoKgzD0dDDGzPdjVH8PSeBtiVVBV5OORy-uNX-NBkyWJdf59RVzdbkdTf-0Z0Ehw_auKB2_mmrYhkAtZ-FMhuDqUjxEsRmnRyRJvHxnfs3XMUQ4ryRzwOkzH65EmY5WPODJY1jyVcXkhDAtVBDpWu84BCFTzKI92g27WGLRh0Vme1jOx7P2lL9p9LKH0T7Ty9ba2NRB7j_D2H7RZ7AxWjZzqWk')"></div>
+</div>
+</article>
+<article class="group bg-surface-container p-lg rounded-xl border border-outline-variant/20 hover:border-secondary transition-all duration-500 hover:-translate-y-2">
+<div class="mb-md">
+<span class="font-display-hero text-headline-lg text-on-surface-variant/20 block">1970</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary">The Pelé Era</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Brazil's masterpiece in Mexico, widely considered the greatest team performance in history, broadcast in vibrant color for the first time.</p>
+<div class="h-[200px] w-full rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A dynamic digital illustration of an iconic football moment from the 1970s, featuring a player in a classic yellow and green kit jumping for a header. The background is a vibrant blur of stadium lights and cheering fans. The artistic style is energetic and high-velocity, using a palette of pitch blue and stadium green with trophy gold highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpvNFEBAsDAoaKRcc4bmvrGfoMCJmmRGhgBZLrOI_sMHDo7JPZFS5ayEEZ7QOcxBxZcycAbH8VK5D5cNsudi2f6Km_EFVhhBKTCERpa5mYQw8s5c257IH-LexbmV_RKy2eZ3vQI_wt2MR3QoBLFhIxUTEwBICosXWDXBwsOOLr7RBd8AFir5iYkqUbEdaMStDef3b5AdQNkLNECoEdBXNqU0yMabS6t3d62Mz7-OBCIFu2a8p-nnc7ueP_MlSbNs2PZOAfCNySdT0')"></div>
+</div>
+</article>
+<article class="group bg-surface-container p-lg rounded-xl border border-outline-variant/20 hover:border-secondary transition-all duration-500 hover:-translate-y-2">
+<div class="mb-md">
+<span class="font-display-hero text-headline-lg text-on-surface-variant/20 block">2022</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary">The Greatest Final</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Lionel Messi's crowning moment in Qatar, concluding one of the most dramatic finals in sporting history against France.</p>
+<div class="h-[200px] w-full rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A modern, high-contrast digital photograph of a stadium illuminated at night with intense floodlights. The sky is a deep indigo, and the pitch is a brilliant stadium green. The scene captures the electric energy of a championship final, featuring light trails and a celebratory atmosphere consistent with a prestigious global sports event." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkAVUqasvR7EM0KbKCA9MqB0gmP5Fsbad6cqDgwR5bVIiXK-EU_xNbsYs-EzKxqgAH0hD0mJzT977Bw09ip5UmFBbJApKVjLK-e_cnmfiwREs9VxVhT13v82zCPKKWwgL18Q7ZpkAH0UMcbInOhE1dEiHxaXEo7PG4BQfRlhoGn54gNcPGUwr2P7sTuyRIz5odF9QimrKmgT6PWMg0NIXwu57tJm3MNCx1Jk2FpEseQxOuACb08meL_zRn6qwBML6mISE-XaCBrHM')"></div>
+</div>
+</article>
+</div>
+</section>
+<!-- Top Players Section -->
+<section class="py-xl bg-surface-container-low" id="players">
+<div class="px-margin-desktop max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-sm">The Next Icons</h2>
+<p class="font-body-lg text-body-lg text-primary max-w-lg">The superstars poised to dominate the North American stage in 2026.</p>
+</div>
+<button class="flex items-center gap-xs text-secondary font-label-md border-b-2 border-secondary pb-1 hover:text-white hover:border-white transition-all">
+                        View All Stars <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter perspective-1000">
+<article class="group preserve-3d card-3d transition-transform duration-500">
+<div class="glass-card p-sm rounded-xl overflow-hidden">
+<div class="h-[400px] w-full rounded-lg overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of Kylian Mbappé in a sleek, dark athletic training kit, looking determined. The lighting is dramatic, high-contrast 'Rembrandt' style with cool blue and vibrant green rim lights. The background is a minimalist, textured dark pitch blue. The overall aesthetic is energetic and elite." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD8WfvzWZBOZtt0szbtR0dkWM_YkA7iZ7XyIxv9w9pkvPIDoeccAv-B0V5xnuedSQSL518uxWbnBgkgSALiKiSLYLA0sb-kJ5rQ8g5H8m2OK-nmawGMCxyZtfMfOAAsMQBpNI7UJoPIu6Z8CCk9jiGrKchdmlIxb_e4w2zO3zFMdHjxs_NuIt6NY3GIoVK0FMaZ7tk-vWdqt1Y8-amKcRGUdmAhpfDgEvZ1vtThMpUrAzgH-bEsAnaVZm7gbVV2d9EolEzmqZc4tM"/>
+<div class="absolute bottom-0 left-0 right-0 p-md bg-gradient-to-t from-background to-transparent">
+<span class="text-tertiary font-display-hero text-headline-md">10</span>
+</div>
+</div>
+<div class="px-base pb-base">
+<h3 class="font-headline-md text-headline-md text-white mb-xs">Kylian Mbappé</h3>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-label-md">France | Forward</span>
+<div class="flex gap-xs">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="group preserve-3d card-3d transition-transform duration-500 delay-75">
+<div class="glass-card p-sm rounded-xl overflow-hidden border-secondary/50">
+<div class="h-[400px] w-full rounded-lg overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover" data-alt="A high-intensity action shot of Erling Haaland celebrating a goal, his expression one of pure power and kinetic energy. He is depicted in a stylized athletic environment with diagonal light beams in stadium green and trophy gold. The style is modern, sharp, and celebratory, utilizing deep pitch blue shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLOOKSR42vkyBBZ8_bqTipZ92erFMJt0S5CAYS1NUU4V7-iL0YU_07gR805CbpTtO_Wye5hA4fpZ2PjqTs4V3brqHTVSjnEMLRjl_gfjTFtLw_QJVHenT_AnVr0sGmzEZLuHhl-pbuYh120OiQqtSOBE_1t1Aou3N7BkCDMptvrYChSYKaw5_zwjpki4WTXbmysl5v5dhx_PD2R2OkbR6vbLBUo4TXJuB8036UVbbmvRa1wjXfuQYq-AM42VbDYUbX5Y1-D-HQEuE"/>
+<div class="absolute bottom-0 left-0 right-0 p-md bg-gradient-to-t from-background to-transparent">
+<span class="text-tertiary font-display-hero text-headline-md">09</span>
+</div>
+</div>
+<div class="px-base pb-base">
+<h3 class="font-headline-md text-headline-md text-white mb-xs">Erling Haaland</h3>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-label-md">Norway | Forward</span>
+<div class="flex gap-xs">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="group preserve-3d card-3d transition-transform duration-500 delay-150">
+<div class="glass-card p-sm rounded-xl overflow-hidden">
+<div class="h-[400px] w-full rounded-lg overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover" data-alt="A vibrant, colorful digital painting of Vinícius Júnior performing a skillful move with a football. The lighting is bright and festive, with glowing trails following the ball to simulate high-velocity movement. The background features stylized patterns of the Brazilian flag integrated with modern, high-contrast dark UI elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD68FG5OjsB4PMT1vK5lW1CJQCOnJ9W5WGXrAy-Uh4BQT22grBA_4TY145My2eHZA67g6ZWionn0ajur0rGAUbk-7X0X95usHrolm88dU3F22GsSsTh95489qURmfcYyyxfdsgGRRDRLA25Cd4o-d4lDVrrTmJVS7B81XFXddxKhgy9HSiqyXcLhFa7WblaW4RXzI-l7MFqG08Sqtkme4M1jQaenvNIoVr4ibdgZVZEbAyNCHOLzFoJ7cDIDoQglwV7MDhKHsGkBWA"/>
+<div class="absolute bottom-0 left-0 right-0 p-md bg-gradient-to-t from-background to-transparent">
+<span class="text-tertiary font-display-hero text-headline-md">07</span>
+</div>
+</div>
+<div class="px-base pb-base">
+<h3 class="font-headline-md text-headline-md text-white mb-xs">Vinícius Jr.</h3>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-label-md">Brazil | Forward</span>
+<div class="flex gap-xs">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Founders Section -->
+<section class="py-xl relative overflow-hidden" id="founders">
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container to-background opacity-50"></div>
+<div class="px-margin-desktop max-w-[1440px] mx-auto relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-xl">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<div class="absolute -top-md -left-md w-xl h-xl border-t-2 border-l-2 border-tertiary"></div>
+<div class="absolute -bottom-md -right-md w-xl h-xl border-b-2 border-r-2 border-tertiary"></div>
+<div class="bg-surface-container p-sm rounded-lg shadow-2xl">
+<div class="w-full h-[500px] bg-cover bg-center rounded" data-alt="A sophisticated, high-end black and white portrait of Jules Rimet, the founder of the World Cup, styled with a modern prestige aesthetic. The lighting is cinematic and dramatic, highlighting his visionary expression. Subtle gold accents and a deep pitch blue border frame the image, blending historical reverence with futuristic UI design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtLOrLBx3HJlz6gEYThxVWwcNt6bH-F57cXxLjyGvxSf9mvkO48hY_5I9r89ENX98AsmGJhLTqS9W7Hblt16VtOOcKQ7WZ43RTM-ymixLr_dugyfmtlFarCYQFK4qXpjNeSTJQ5xOSVtrHOyyZNDnoFMsr1PESSVywsWhN6XqUIV9YJ6SHSFapbsVWndGfGj7XZGpyse88Xt4xrvr3d17Jm8hT3PUUc3vRsY4PZQa0R9161PTbF3_APfoba3wRto3i48NqZllqyWE')"></div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-white">The Visionaries</h2>
+<p class="font-headline-sm text-headline-sm text-tertiary">Jules Rimet &amp; The Birth of World Football</p>
+<div class="space-y-sm text-on-surface-variant font-body-lg">
+<p>In 1928, Jules Rimet and his colleagues dared to dream of a tournament that would transcend borders and unify the world through sport. Their conviction laid the foundation for the most-watched event on the planet.</p>
+<p>The "Coupe du Monde" was more than a trophy; it was a testament to the human spirit. Today, we continue that legacy with more teams and more passion than ever before.</p>
+</div>
+<div class="pt-md grid grid-cols-2 gap-lg">
+<div>
+<h4 class="text-white font-headline-sm">1930</h4>
+<p class="text-primary font-label-md">First Tournament</p>
+</div>
+<div>
+<h4 class="text-white font-headline-sm">211</h4>
+<p class="text-primary font-label-md">Member Nations</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Teams Section -->
+<section class="py-xl px-margin-desktop max-w-[1440px] mx-auto mb-xl" id="teams">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-white mb-sm">Title Contenders</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mx-auto max-w-2xl">A statistical breakdown of the heavyweights arriving in 2026 to claim the ultimate prize.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Team Card: Brazil -->
+<div class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/20 group hover:shadow-[0_0_40px_rgba(74,225,131,0.15)] transition-all duration-500">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A wide-angle, atmospheric stadium shot focusing on the yellow and green section of the crowd, with flags waving and smoke in the air. The image uses a cinematic lens with deep depth of field. High-contrast lighting and a saturated color palette of Stadium Green and Trophy Gold emphasize the kinetic energy of Brazilian football fans." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9K2uvssC-HMalX7q16fkjr1mOJ2iJCe3hJsLKcZ3cfk7as6U0hsHsbsamG0ZSgTCsxn1OV40imLNdqZlTHsVLLjk386z_Boe6NoLDRbiFYiuqhTVCzfU5R_4racHphMTZ9bVpWtBMy7Hqsh1q0xkJww_vsdClv-VNK0_M0ymZgwWRJULcPOmnJSaUWY5sgXp5z_ALYIYb8X-wIFiAsUgcJTmMUbm7KzR2BrVT-9nmCC6SjShRQRlIDgAibMJXRt-vTiRldWhZEvs"/>
+</div>
+<div class="md:w-3/5 p-lg space-y-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-white">Brazil</h3>
+<p class="text-secondary font-label-md uppercase tracking-widest">Pentacampeões</p>
+</div>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Attack Rating</span>
+<span class="text-white font-bold">96%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[96%]"></div>
+</div>
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Defense Rating</span>
+<span class="text-white font-bold">88%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[88%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Card: Argentina -->
+<div class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/20 group hover:shadow-[0_0_40px_rgba(74,225,131,0.15)] transition-all duration-500">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A triumphant celebration scene with players in light blue and white striped kits, captured in a burst of light and confetti. The style is high-velocity and epic, emphasizing the prestige of the defending champions. The lighting uses soft outer glows and trophy gold accents to simulate a radiant victory atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0r5SN7NI2e99ynGUzloXBjlG-NIbRO0_fc-idEZRz7h-xbfDjkLhIliFBNDtqcLucm5GxeGWclwoBRWx47BvQwlnXBpbQxEQHof-6wGpyj4OcpmKgREYntWU967LEIXab4YGH4g46ykt_C-WRjfxbjDR8AG779XwSwKjcC6Rahm2VvOrCYttn-qmnR9wo6JCKsuy4eYkvz9jOdQ43lsSqrUtOxl2d0THfMfBo8Xn-ULur4LyhLXLiEuDMV6OM48CDNAoEGTLMJnA"/>
+</div>
+<div class="md:w-3/5 p-lg space-y-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-white">Argentina</h3>
+<p class="text-secondary font-label-md uppercase tracking-widest">Defending Champions</p>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Team Synergy</span>
+<span class="text-white font-bold">98%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[98%]"></div>
+</div>
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Experience</span>
+<span class="text-white font-bold">92%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[92%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Card: France -->
+<div class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/20 group hover:shadow-[0_0_40px_rgba(74,225,131,0.15)] transition-all duration-500">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern architectural stadium interior with a sleek, dark blue and chrome finish. The lighting is high-contrast with intense blue focus lights on a central player silhouette. This abstract, athletic-themed image represents the French national team's precision and power in a futuristic World Cup setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZsZFCLgvtdX4476EzDW0V2MGQMc2OPQr70CVryN-iKW87dPRNAVCYCvgrhyrQ1w8dkybR-0nAF5ARrioNcOiHxwdELGvCyopgvwNPaxDx9RT-NtcayxLQ4CRA5Ek65pDSXdt_mGoIiTkw0zaT4UqXSCjoPlOoKR1Kb11KTDPFEe50X3dwWMeNlsUJdilyYnSXcdhJPbY0MLGDzGtIFpCf8gPREVV1iZJFq7d5PcSDODNW73DxQbjdOqmWe-yfbwUxAQeG370jxY"/>
+</div>
+<div class="md:w-3/5 p-lg space-y-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-white">France</h3>
+<p class="text-secondary font-label-md uppercase tracking-widest">Les Bleus</p>
+</div>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Squad Depth</span>
+<span class="text-white font-bold">99%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[99%]"></div>
+</div>
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Speed Rating</span>
+<span class="text-white font-bold">95%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[95%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Card: Germany -->
+<div class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/20 group hover:shadow-[0_0_40px_rgba(74,225,131,0.15)] transition-all duration-500">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sleek, close-up shot of a modern football on a perfectly manicured stadium green pitch at night. The lighting is dramatic, highlighting the texture of the ball and the grass. The color palette features deep blacks, stadium greens, and sharp white highlights, reflecting the disciplined and high-performance nature of the German national team." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsSnHzF8nfjNhSTLqs-ceMr4Eyzy4zqcbUbnbXt1Y5Vylpvb5EUaeYf86Q-WanMgyFEXEXirNNoUJkTJTSuTFm9ky8utQlNNzhqPxCtBgfOIMT2iWk6ZCa261P3_l3nW1_ubEOCBHXX_KjQKJhetg6cBKOR82kLAcVBtPg1D2FCVqJ8vCKlrko1BwZwQwVYSVXM5IRpGmopbKhNKVbYPiJwSL136ahJKM5YxIWUuSF-uXnjEJ3WgrnbVI7H_yIdvcvGxLmzGzLBUs"/>
+</div>
+<div class="md:w-3/5 p-lg space-y-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-white">Germany</h3>
+<p class="text-secondary font-label-md uppercase tracking-widest">Die Mannschaft</p>
+</div>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Tactical Discipline</span>
+<span class="text-white font-bold">97%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[97%]"></div>
+</div>
+<div class="flex justify-between text-label-md">
+<span class="text-on-surface-variant">Efficiency</span>
+<span class="text-white font-bold">94%</span>
+</div>
+<div class="h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[94%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-lg bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1440px] mx-auto">
+<div class="space-y-sm">
+<div class="font-headline-sm text-headline-sm text-tertiary font-bold tracking-tighter">WC2026 HUB</div>
+<p class="text-on-surface-variant font-body-md opacity-80">The ultimate destination for global football fans. Tracking history, stars, and the road to the final.</p>
+</div>
+<div>
+<h4 class="text-primary font-headline-sm mb-sm">Links</h4>
+<ul class="space-y-xs">
+<li><a class="font-body-md text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Contact Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Tournament Schedule</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-headline-sm mb-sm">Follow the Action</h4>
+<div class="flex gap-sm">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#">
+<span class="material-symbols-outlined">notifications</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-primary font-headline-sm mb-sm">Join the Hub</h4>
+<p class="text-on-surface-variant text-label-md mb-sm opacity-80">Get exclusive updates and ticket alerts directly in your inbox.</p>
+<div class="flex gap-xs">
+<input class="bg-surface-container-high border-none rounded-lg px-md py-xs text-white focus:ring-1 focus:ring-secondary w-full" placeholder="Enter email" type="email"/>
+<button class="bg-tertiary text-on-tertiary px-md py-xs rounded-lg font-label-md">Join</button>
+</div>
+</div>
+</div>
+<div class="mt-lg pt-lg border-t border-outline-variant/10 px-margin-desktop max-w-[1440px] mx-auto">
+<p class="text-on-surface-variant font-body-md opacity-80 text-center">© 2026 FIFA World Cup Information Hub. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h2>Welcome to World Cup 2026</h2>
-                <p>The greatest football tournament returns with passion, glory, and unforgettable moments</p>
-                <button class="cta-button">Explore Now</button>
-            </div>
-            <div class="hero-graphic">
-                <div class="soccer-ball"></div>
-                <div class="floating-element element-1"></div>
-                <div class="floating-element element-2"></div>
-                <div class="floating-element element-3"></div>
-            </div>
-        </section>
+        // Basic scroll effect for TopNavBar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-lg', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
 
-        <!-- Tournament Information Section -->
-        <section class="tournaments" id="tournaments">
-            <h2 class="section-title">Tournament Highlights</h2>
-            <div class="cards-container">
-                <article class="card">
-                    <div class="card-icon">⚽</div>
-                    <h3>32 Teams</h3>
-                    <p>The world's best nations competing for glory</p>
-                    <div class="card-overlay"></div>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Champion Dreams</h3>
-                    <p>Which nation will lift the trophy this summer?</p>
-                    <div class="card-overlay"></div>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🎉</div>
-                    <h3>Global Festival</h3>
-                    <p>A celebration of football across continents</p>
-                    <div class="card-overlay"></div>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🔥</div>
-                    <h3>Epic Moments</h3>
-                    <p>Goals, drama, and memories to last forever</p>
-                    <div class="card-overlay"></div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Teams Section -->
-        <section class="teams" id="teams">
-            <h2 class="section-title">Featured Teams</h2>
-            <div class="teams-grid">
-                <article class="team-card">
-                    <div class="team-flag">🇧🇷</div>
-                    <h3>Brazil</h3>
-                    <p class="team-description">The Seleção - 5-time champions seeking redemption</p>
-                    <div class="team-hover-element"></div>
-                </article>
-
-                <article class="team-card">
-                    <div class="team-flag">🇦🇷</div>
-                    <h3>Argentina</h3>
-                    <p class="team-description">The defending champions - a team united</p>
-                    <div class="team-hover-element"></div>
-                </article>
-
-                <article class="team-card">
-                    <div class="team-flag">🇫🇷</div>
-                    <h3>France</h3>
-                    <p class="team-description">The fierce competitors ready for battle</p>
-                    <div class="team-hover-element"></div>
-                </article>
-
-                <article class="team-card">
-                    <div class="team-flag">🇪🇸</div>
-                    <h3>Spain</h3>
-                    <p class="team-description">The beautiful game masters of possession</p>
-                    <div class="team-hover-element"></div>
-                </article>
-
-                <article class="team-card">
-                    <div class="team-flag">🇩🇪</div>
-                    <h3>Germany</h3>
-                    <p class="team-description">The machine returns with precision and power</p>
-                    <div class="team-hover-element"></div>
-                </article>
-
-                <article class="team-card">
-                    <div class="team-flag">🇲🇦</div>
-                    <h3>Morocco</h3>
-                    <p class="team-description">Africa's rising star on the world stage</p>
-                    <div class="team-hover-element"></div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Schedule Section -->
-        <section class="schedule" id="schedule">
-            <h2 class="section-title">Match Schedule</h2>
-            <div class="schedule-timeline">
-                <article class="match-card">
-                    <div class="match-date">June 12</div>
-                    <div class="match-details">
-                        <h4>Opening Match</h4>
-                        <p class="match-teams">Host Nation vs Group Winner</p>
-                        <p class="match-venue">🏟️ Grand Stadium</p>
-                    </div>
-                    <div class="match-indicator"></div>
-                </article>
-
-                <article class="match-card">
-                    <div class="match-date">June 15</div>
-                    <div class="match-details">
-                        <h4>Group Stage</h4>
-                        <p class="match-teams">Multiple Matches</p>
-                        <p class="match-venue">🏟️ Various Venues</p>
-                    </div>
-                    <div class="match-indicator"></div>
-                </article>
-
-                <article class="match-card">
-                    <div class="match-date">July 8</div>
-                    <div class="match-details">
-                        <h4>Quarter Finals</h4>
-                        <p class="match-teams">Best of the Best</p>
-                        <p class="match-venue">🏟️ Premier Stadiums</p>
-                    </div>
-                    <div class="match-indicator"></div>
-                </article>
-
-                <article class="match-card">
-                    <div class="match-date">July 15</div>
-                    <div class="match-details">
-                        <h4>Semi Finals</h4>
-                        <p class="match-teams">Elite Four Teams</p>
-                        <p class="match-venue">🏟️ Championship Venues</p>
-                    </div>
-                    <div class="match-indicator"></div>
-                </article>
-
-                <article class="match-card">
-                    <div class="match-date">July 19</div>
-                    <div class="match-details">
-                        <h4>Third Place</h4>
-                        <p class="match-teams">Bronze Medal Match</p>
-                        <p class="match-venue">🏟️ Grand Final Arena</p>
-                    </div>
-                    <div class="match-indicator"></div>
-                </article>
-
-                <article class="match-card">
-                    <div class="match-date">July 20</div>
-                    <div class="match-details">
-                        <h4>Grand Final</h4>
-                        <p class="match-teams">The Ultimate Showdown</p>
-                        <p class="match-venue">🏟️ Iconic Stadium</p>
-                    </div>
-                    <div class="match-indicator"></div>
-                </article>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about">
-            <h2 class="section-title">About World Cup 2026</h2>
-            <article class="about-content">
-                <div class="about-text">
-                    <h3>The Journey Continues</h3>
-                    <p>The FIFA World Cup 2026 represents a milestone moment in football history. For the first time, the tournament will be hosted across three nations, bringing the beautiful game to new audiences and creating unprecedented opportunities for global celebration.</p>
-                    <p>This tournament symbolizes unity through sport, where countries transcend boundaries to compete in the spirit of fair play and excellence. Nations from every continent will gather to showcase their talent, determination, and passion for football.</p>
-                </div>
-                <div class="about-graphic">
-                    <div class="globe"></div>
-                    <div class="rotating-circle"></div>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#tournaments">Tournaments</a></li>
-                    <li><a href="#teams">Teams</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#" class="social-icon">📘</a>
-                    <a href="#" class="social-icon">🐦</a>
-                    <a href="#" class="social-icon">📷</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: info@worldcup2026.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 World Cup. All rights reserved. | Powered by Football Passion</p>
-        </div>
-    </footer>
-</body>
-</html>
+        // 3D Card Hover Effect for Players
+        const cards = document.querySelectorAll('.card-3d');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+    </script>
+</body></html>
